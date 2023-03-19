@@ -26,6 +26,7 @@ def help(message):
 # создаем обработчик сообщений
 @bot.message_handler(func=lambda message: True)
 def echo(message):
+    print(message)
     bot.reply_to(message, "Запрос принят в работу.")
     try:
         response = openai.Completion.create(
