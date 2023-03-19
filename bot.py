@@ -13,7 +13,8 @@ bot = telebot.TeleBot(token)
 # создаем обработчик команд
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, "Привет! Я бот, который может отвечать на ваши вопросы с помощью с OpenAI.")
+    bot.reply_to(message,
+                 "Привет! Я бот, который может отвечать на ваши вопросы с помощью с OpenAI.\n Просто задай вопрос и жди ответа.")
 
 
 @bot.message_handler(commands=['help'])
